@@ -16,19 +16,20 @@ class YoutubeActivity : AppCompatActivity() {
         setContentView(R.layout.activity_youtube)
 
         val button: FloatingActionButton = findViewById(R.id.floatingActionButton)
-        button.setOnClickListener{
-            Intent(this@YoutubeActivity,MainActivity:: class.java).also{
+        button.setOnClickListener {
+            Intent(this@YoutubeActivity, MainActivity::class.java).also {
                 startActivity(it)
             }
 
-        val youtubeId = "fjn9B64Znrk"
-        val mywebview: WebView = findViewById(R.id.webview)
-        val webSettings: WebSettings = mywebview.settings
-        webSettings.javaScriptEnabled = true
-        webSettings.loadWithOverviewMode = true
-        webSettings.useWideViewPort= true
-        mywebview.loadUrl("http://www.youtube.com/enbed/$youtubeId")
+            val youtubeId = "fjn9B64Znrk"
+            val mywebview: WebView = findViewById(R.id.webview)
+            val webSettings: WebSettings = mywebview.settings
+            webSettings.javaScriptEnabled = true
+            webSettings.loadWithOverviewMode = true
+            webSettings.useWideViewPort = true
+            mywebview.loadUrl("http://www.youtube.com/enbed/$youtubeId")
 
 
+        }
     }
 }
